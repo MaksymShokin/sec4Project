@@ -3,7 +3,7 @@ import classes from './customButton.module.css';
 
 const CustomButton = ({ link, children }) => {
   return (
-    <Link className={classes.btn} href={link}>
+    <Link href={link}>
       <a className={classes.btn}> {children}</a>
     </Link>
   );

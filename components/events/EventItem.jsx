@@ -27,7 +27,7 @@ const EventItem = ({ item }) => {
           </div>
         </div>
         <div className={classes.actions}>
-          <CustomButton link={`events/${item.id}`}>
+          <CustomButton link={`/events/${item.id}`}>
             <span>Explore</span>
             <span className={classes.icon}>
               <ArrowRightIcon />

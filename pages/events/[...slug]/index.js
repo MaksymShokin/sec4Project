@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router';
 import { getFilteredEvents } from '../../../dummy';
 import EventList from '../../../components/events/EventList.jsx';
+import ErrorAlert from '../../../components/ui/error-alert/error-alert';
+import ResultsTitle from '../../../components/EventDetail/results-title/results-title';
 
 const EventFilterPage = () => {
   const { query } = useRouter();
@@ -16,11 +18,12 @@ const EventFilterPage = () => {
   });
 
   if (!filteredEvents.length) {
-    return <div>No events found</div>;
+    return <ErrorAlert>No events found</ErrorAlert>;
   }
 
   return (
     <div>
+      <ResultsTitle />
       <EventList items={filteredEvents} />
     </div>
   );
